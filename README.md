@@ -25,9 +25,9 @@ Alternatively, an `InputSequence` can be built and "played" through an existing 
     bool isBlocking = true; // Force subsequent button presses to come after this press's duration
     
     // Press R2 + X over 40 ms
-    seq.addButton(Button.R2, 40, !isBlocking);   // 0  ms: Hold R2 for 40 ms but still allow other inputs
+    seq.addButton(Button.R2, 40, !isBlocking);   // 0  ms: Hold R2 for 40 ms but allow other inputs
     seq.addWait(10);                             // 0  ms: Wait 10 ms from the start of holding R2
-    seq.addButton(Button.Cross, 20, isBlocking); // 10 ms: Tap X over 20 ms with an implied wait of 20 ms
+    seq.addButton(Button.Cross, 20, isBlocking); // 10 ms: Tap X over 20 ms with an implied wait
                                                  // 30 ms: Wait 10 ms from the end of tapping X
                                                  // 40 ms: Release R2
     
